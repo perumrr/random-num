@@ -1,3 +1,5 @@
+
+console.log("main.js is loaded!");
 document.addEventListener('alpine:init', () => {
     Alpine.data('randomNameGenerator', () => ({
         names: ["Alice", "Bob", "Charlie", "Diana", "Eve", "Frank", "Grace", "Hank", "Ivy", "Jack"],
