@@ -1,10 +1,8 @@
-// main.js
-Alpine.data('randomNameGenerator', () => ({
-    names: ["Alice", "Bob", "Charlie", "Diana", "Eve", "Frank", "Grace", "Hank", "Ivy", "Jack"],
-    selectedName: "Click the button to see a name",
-    pickRandomName() {
-        console.log("pickRandomName() called!");
-        let randomIndex = Math.floor(Math.random() * this.names.length);
-        this.selectedName = this.names[randomIndex];
-    }
-}));
+document.addEventListener('DOMContentLoaded', () => {
+    Alpine.data('randomNameGenerator', () => ({
+        selectedName: "Click the button to see a name",
+        pickRandomName() {
+            this.selectedName = "Name selected!";
+        }
+    }));
+});
