@@ -1,4 +1,3 @@
-<script src="/assets/js/main.js" defer></script>
 
 
 document.addEventListener('alpine:init', () => {
