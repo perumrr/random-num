@@ -1,15 +1,19 @@
-document.addEventListener('alpine:init', () => {
-    console.log("Alpine.js initialized!");
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("DOM fully loaded!");
 
-    Alpine.data('randomNameGenerator', () => ({
-        names: ["Alice", "Bob", "Charlie", "Diana", "Eve", "Frank", "Grace", "Hank", "Ivy", "Jack"],
-        selectedName: "Click the button to see a name",
-        pickRandomName() {
-            console.log("pickRandomName() called!"); 
-            let randomIndex = Math.floor(Math.random() * this.names.length);
-            this.selectedName = this.names[randomIndex];
-        }
-    }));
+    document.addEventListener('alpine:init', () => {
+        console.log("Alpine.js initialized!");
 
-    console.log("Registered Components:", Alpine);
+        Alpine.data('randomNameGenerator', () => ({
+            names: ["Alice", "Bob", "Charlie", "Diana", "Eve", "Frank", "Grace", "Hank", "Ivy", "Jack"],
+            selectedName: "Click the button to see a name",
+            pickRandomName() {
+                console.log("pickRandomName() called!");
+                let randomIndex = Math.floor(Math.random() * this.names.length);
+                this.selectedName = this.names[randomIndex];
+            }
+        }));
+    });
+
+    Alpine.start();
 });
