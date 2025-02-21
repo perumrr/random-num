@@ -10,4 +10,6 @@ document.addEventListener('alpine:init', () => {
             this.selectedName = this.names[randomIndex];
         }
     }));
+
+    console.log("Registered Components:", Alpine);
 });
